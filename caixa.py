@@ -11,10 +11,16 @@ def sacar_notas(valor, valor_nota, cont):
         cont += 1
     return valor, cont
 
+def cabecalho():
+    print("*" * 40)
+    print("Bem vindo ao Caixa Eletrônico STEM")
+    print("*" * 40)
+
 valor = 0
 while valor > 600 or valor < 10:
     valor = int(input("Insira o valor do saque (entre 10 e 600): "))
 
+cabecalho()
 valor, cont100 = sacar_notas(valor, 100, cont100)
 valor, cont50 = sacar_notas(valor, 50, cont50)
 valor, cont10 = sacar_notas(valor, 10, cont10)
